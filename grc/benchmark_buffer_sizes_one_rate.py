@@ -8,7 +8,8 @@
 from gnuradio import eng_notation
 from gnuradio import gr
 from gnuradio.eng_option import eng_option
-from gnuradio.gr import firdes
+from gnuradio.filter import firdes
+from gnuradio import blocks
 from optparse import OptionParser
 import latency
 
@@ -38,11 +39,11 @@ class test1(gr.top_block):
         ##################################################
         self.latency_tagger_0 = latency.tagger(gr.sizeof_gr_complex, lspace, "latency0")
         self.latency_probe_0 = latency.probe(gr.sizeof_gr_complex, ["latency0"])
-        self.gr_vector_source_x_0 = gr.vector_source_c((0,1,2,3,4,5,6,7), True, 1)
-        self.gr_throttle_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate)
-        self.gr_multiply_const_vxx_1 = gr.multiply_const_vcc((0, ))
-        self.gr_multiply_const_vxx_0 = gr.multiply_const_vcc((0, ))
-        self.gr_head_0 = gr.head(gr.sizeof_gr_complex*1, nsamp)
+        self.gr_vector_source_x_0 = blocks.vector_source_c((0,1,2,3,4,5,6,7), True, 1)
+        self.gr_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate)
+        self.gr_multiply_const_vxx_1 = blocks.multiply_const_vcc((0, ))
+        self.gr_multiply_const_vxx_0 = blocks.multiply_const_vcc((0, ))
+        self.gr_head_0 = blocks.head(gr.sizeof_gr_complex*1, nsamp)
 
 
         for b in [self.gr_vector_source_x_0, self.gr_head_0, self.latency_tagger_0, self.gr_multiply_const_vxx_0, self.gr_multiply_const_vxx_1]:
