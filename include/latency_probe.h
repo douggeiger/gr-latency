@@ -23,8 +23,8 @@
 
 #include <latency_api.h>
 #include <map>
-#include <gr_sync_block.h>
-#include "boost/tuple/tuple.hpp" 
+#include <gnuradio/sync_block.h>
+#include <boost/tuple/tuple.hpp>
 
 class latency_probe;
 typedef boost::shared_ptr<latency_probe> latency_probe_sptr;
@@ -42,7 +42,7 @@ typedef struct  {
  * \brief <+description+>
  *
  */
-class LATENCY_API latency_probe : public gr_sync_block
+class LATENCY_API latency_probe : public gr::sync_block
 {
 	friend LATENCY_API latency_probe_sptr latency_make_probe (int item_size, std::vector<std::string> keys);
 

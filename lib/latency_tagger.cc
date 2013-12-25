@@ -22,11 +22,11 @@
 #include "config.h"
 #endif
 
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <latency_tagger.h>
 
-#include "boost/date_time/local_time/local_time.hpp"
-#include "boost/date_time/posix_time/posix_time.hpp"
+#include <boost/date_time/local_time/local_time.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 using boost::posix_time::ptime;
 using boost::posix_time::time_from_string;
@@ -40,12 +40,12 @@ latency_make_tagger (int item_size, int tag_frequency, std::string tag)
 
 
 latency_tagger::latency_tagger (int item_size, int tag_frequency, std::string tag)
-	: gr_sync_block ("latency_tagger",
-		gr_make_io_signature (1, 1, item_size),
-		gr_make_io_signature (1, 1, item_size)),
+	: gr::sync_block ("latency_tagger",
+        gr::io_signature::make (1, 1, item_size),
+        gr::io_signature::make (1, 1, item_size)),
       d_tag_frequency(tag_frequency),
-      d_key(pmt::pmt_intern(tag)),
-      d_src(pmt::pmt_intern(name())),
+      d_key(pmt::intern(tag)),
+      d_src(pmt::intern(name())),
       d_itemsize(item_size)
 {
 }
@@ -69,7 +69,7 @@ latency_tagger::work (int noutput_items,
             ptime epoch(boost::gregorian::date(1970,1,1));
             time_duration diff = now - epoch;
             double time = diff.total_seconds() + diff.fractional_seconds() * 1e-6;
-            add_item_tag(0, i, d_key, pmt::pmt_from_double(time), d_src);
+            add_item_tag(0, i, d_key, pmt::from_double(time), d_src);
         }
     }
 

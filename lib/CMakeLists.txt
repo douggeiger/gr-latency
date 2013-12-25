@@ -22,7 +22,7 @@
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
 add_library(gnuradio-latency SHARED latency_tagger.cc latency_probe.cc )
-target_link_libraries(gnuradio-latency ${Boost_LIBRARIES} ${GRUEL_LIBRARIES} ${GNURADIO_CORE_LIBRARIES})
+target_link_libraries(gnuradio-latency ${Boost_LIBRARIES} ${GNURADIO_RUNTIME_LIBRARIES})
 set_target_properties(gnuradio-latency PROPERTIES DEFINE_SYMBOL "gnuradio_latency_EXPORTS")
 
 ########################################################################

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Sep 28 17:33:22 2012</timestamp>
+  <timestamp>Wed Dec 25 18:13:24 2013</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -48,35 +48,20 @@
       <value>0</value>
     </param>
     <param>
+      <key>pre_hook</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>post_hook</key>
+      <value>None</value>
+    </param>
+    <param>
       <key>realtime_scheduling</key>
       <value></value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(10, 10)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>32000</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(12, 82)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -99,7 +84,69 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 135)</value>
+      <value>(11, 171)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>32000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(7, 93)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_head</key>
+    <param>
+      <key>id</key>
+      <value>blocks_head_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>100000</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(418, 46)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -129,8 +176,16 @@
       <value>complex</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(552, 49)</value>
+      <value>(596, 38)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -138,10 +193,10 @@
     </param>
   </block>
   <block>
-    <key>gr_multiply_const_vxx</key>
+    <key>blocks_multiply_const_vxx</key>
     <param>
       <key>id</key>
-      <value>gr_multiply_const_vxx_1</value>
+      <value>blocks_multiply_const_vxx_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -160,8 +215,16 @@
       <value>1</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(295, 173)</value>
+      <value>(862, 45)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -169,10 +232,10 @@
     </param>
   </block>
   <block>
-    <key>gr_throttle</key>
+    <key>blocks_throttle</key>
     <param>
       <key>id</key>
-      <value>gr_throttle_0</value>
+      <value>blocks_throttle_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -191,19 +254,31 @@
       <value>1</value>
     </param>
     <param>
+      <key>ignoretag</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(472, 173)</value>
+      <value>(619, 117)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>180</value>
     </param>
   </block>
   <block>
-    <key>gr_multiply_const_vxx</key>
+    <key>blocks_multiply_const_vxx</key>
     <param>
       <key>id</key>
-      <value>gr_multiply_const_vxx_0</value>
+      <value>blocks_multiply_const_vxx_1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -222,50 +297,27 @@
       <value>1</value>
     </param>
     <param>
-      <key>_coordinate</key>
-      <value>(767, 55)</value>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
-      <key>_rotation</key>
+      <key>minoutbuf</key>
       <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_head</key>
-    <param>
-      <key>id</key>
-      <value>gr_head_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>num_items</key>
-      <value>100000</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(374, 55)</value>
+      <value>(845, 125)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>180</value>
     </param>
   </block>
   <block>
-    <key>gr_vector_source_x</key>
+    <key>blocks_vector_source_x</key>
     <param>
       <key>id</key>
-      <value>gr_vector_source_x_0</value>
+      <value>blocks_vector_source_x_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -277,7 +329,11 @@
     </param>
     <param>
       <key>vector</key>
-      <value>0,1,2,3,4,5,6,7</value>
+      <value>(0,1,2,3,4,5,6,7)</value>
+    </param>
+    <param>
+      <key>tags</key>
+      <value>[]</value>
     </param>
     <param>
       <key>repeat</key>
@@ -288,8 +344,16 @@
       <value>1</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(179, 49)</value>
+      <value>(201, 30)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -315,47 +379,108 @@
       <value>complex</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(661, 173)</value>
+      <value>(391, 125)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>180</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_tag_debug</key>
+    <param>
+      <key>id</key>
+      <value>blocks_tag_debug_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value></value>
+    </param>
+    <param>
+      <key>filter</key>
+      <value>"latency0"</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>display</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(188, 122)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
     </param>
   </block>
   <connection>
-    <source_block_id>gr_throttle_0</source_block_id>
-    <sink_block_id>latency_probe_0</sink_block_id>
+    <source_block_id>blocks_head_0</source_block_id>
+    <sink_block_id>latency_tagger_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_multiply_const_vxx_1</source_block_id>
-    <sink_block_id>gr_throttle_0</sink_block_id>
+    <source_block_id>blocks_vector_source_x_0</source_block_id>
+    <sink_block_id>blocks_head_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>latency_tagger_0</source_block_id>
-    <sink_block_id>gr_multiply_const_vxx_0</sink_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_multiply_const_vxx_0</source_block_id>
-    <sink_block_id>gr_multiply_const_vxx_1</sink_block_id>
+    <source_block_id>blocks_multiply_const_vxx_1</source_block_id>
+    <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_vector_source_x_0</source_block_id>
-    <sink_block_id>gr_head_0</sink_block_id>
+    <source_block_id>latency_probe_0</source_block_id>
+    <sink_block_id>blocks_tag_debug_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_head_0</source_block_id>
-    <sink_block_id>latency_tagger_0</sink_block_id>
+    <source_block_id>blocks_throttle_0</source_block_id>
+    <sink_block_id>latency_probe_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

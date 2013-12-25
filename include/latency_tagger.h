@@ -22,7 +22,7 @@
 #define INCLUDED_LATENCY_TAGGER_H
 
 #include <latency_api.h>
-#include <gr_sync_block.h>
+#include <gnuradio/sync_block.h>
 
 class latency_tagger;
 typedef boost::shared_ptr<latency_tagger> latency_tagger_sptr;
@@ -33,7 +33,7 @@ LATENCY_API latency_tagger_sptr latency_make_tagger (int item_size, int tag_freq
  * \brief <+description+>
  *
  */
-class LATENCY_API latency_tagger : public gr_sync_block
+class LATENCY_API latency_tagger : public gr::sync_block
 {
 	friend LATENCY_API latency_tagger_sptr latency_make_tagger (int item_size, int tag_frequency, std::string tag);
 

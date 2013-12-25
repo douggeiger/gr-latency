@@ -22,7 +22,7 @@
 #ifndef INCLUDED_LATENCY_API_H
 #define INCLUDED_LATENCY_API_H
 
-#include <gruel/attributes.h>
+#include <gnuradio/attributes.h>
 
 #ifdef gnuradio_latency_EXPORTS
 #  define LATENCY_API __GR_ATTR_EXPORT
